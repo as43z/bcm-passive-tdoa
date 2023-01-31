@@ -43,7 +43,7 @@ fi
 print_header "Updating repositories"
 sudo apt-get update
 print_header "Installing packages"
-xargs sudo apt-get install -y <package_requirements.txt
+xargs sudo apt-get install --reinstall -y <package_requirements.txt
 print_header "Downloading b43-tools sources"
 if [[ ! -d $HOME/b43-tools ]]; then mkdir $HOME/b43-tools; fi; 
 wget -O $HOME/b43-tools/b43-tools.tar.xz http://bues.ch/cgit/b43-tools.git/snapshot/b43-tools-b43-fwcutter-014.tar.xz --no-check-certificate
@@ -57,21 +57,21 @@ print_finish "Done!"
 print_warn "Please review the output of this script and look if any errors occured during the setup process."
 
 # Clean up
-unset $COLOR_NC
-unset $COLOR_BLACK
-unset $COLOR_GRAY
-unset $COLOR_RED
-unset $COLOR_LIGHT_RED
-unset $COLOR_GREEN
-unset $COLOR_LIGHT_GREEN
-unset $COLOR_BROWN
-unset $COLOR_YELLOW
-unset $COLOR_BLUE
-unset $COLOR_LIGHT_BLUE
-unset $COLOR_PURPLE
-unset $COLOR_LIGHT_PURPLE
-unset $COLOR_CYAN
-unset $COLOR_LIGHT_CYAN
-unset $COLOR_LIGHT_GRAY
-unset $COLOR_WHITE
-unset $CURRENT
+unset COLOR_NC
+unset COLOR_BLACK
+unset COLOR_GRAY
+unset COLOR_RED
+unset COLOR_LIGHT_RED
+unset COLOR_GREEN
+unset COLOR_LIGHT_GREEN
+unset COLOR_BROWN
+unset COLOR_YELLOW
+unset COLOR_BLUE
+unset COLOR_LIGHT_BLUE
+unset COLOR_PURPLE
+unset COLOR_LIGHT_PURPLE
+unset COLOR_CYAN
+unset COLOR_LIGHT_CYAN
+unset COLOR_LIGHT_GRAY
+unset COLOR_WHITE
+unset CURRENT
