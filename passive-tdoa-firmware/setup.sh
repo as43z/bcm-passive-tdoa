@@ -43,14 +43,14 @@ fi
 print_header "Updating repositories"
 apt-get update
 print_header "Installing packages"
-xargs sudo apt-get install <package_requirements.txt
+xargs sudo apt-get install -y <package_requirements.txt
 print_header "Downloading b43-tools sources"
 if [[ ! -d $HOME/b43-tools ]]; then mkdir $HOME/b43-tools; fi; 
-wget -O $HOME/b43-tools/b43-tools.zip https://github.com/mbuesch/b43-tools/archive/refs/heads/master.zip
+wget -O $HOME/b43-tools/b43-tools.tar.xz http://bues.ch/cgit/b43-tools.git/snapshot/b43-tools-b43-fwcutter-014.tar.xz
 print_header "Unpacking b43-tools sources"
-unzip $HOME/b43-tools/b43-tools.zip
+tar xvf $HOME/b43-tools/b43-tools.tar.xz
 print_header "Making and installing b43-tools sources"
-cd $HOME/b43-tools
+cd $HOME/b43-tools/b43-tools/b43-assembler
 make && sudo make install
 print_finish "Done!"
 print_warn "Please review the output of this script and look if any errors occured during the setup process."
