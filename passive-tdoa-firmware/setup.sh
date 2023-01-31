@@ -41,7 +41,7 @@ if [ "$EUID" -eq 0 ]
 fi
 
 print_header "Updating repositories"
-apt-get update
+sudo apt-get update
 print_header "Installing packages"
 xargs sudo apt-get install -y <package_requirements.txt
 print_header "Downloading b43-tools sources"
