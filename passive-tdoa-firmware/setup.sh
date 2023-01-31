@@ -46,7 +46,7 @@ print_header "Installing packages"
 xargs sudo apt-get install -y <package_requirements.txt
 print_header "Downloading b43-tools sources"
 if [[ ! -d $HOME/b43-tools ]]; then mkdir $HOME/b43-tools; fi; 
-wget --no-check-certificate -O $HOME/b43-tools/b43-tools.tar.xz http://bues.ch/cgit/b43-tools.git/snapshot/b43-tools-b43-fwcutter-014.tar.xz
+wget -O $HOME/b43-tools/b43-tools.tar.xz http://bues.ch/cgit/b43-tools.git/snapshot/b43-tools-b43-fwcutter-014.tar.xz --no-check-certificate
 print_header "Unpacking b43-tools sources"
 tar xvf $HOME/b43-tools/b43-tools.tar.xz
 print_header "Making and installing b43-tools sources"
