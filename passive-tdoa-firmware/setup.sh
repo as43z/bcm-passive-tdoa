@@ -48,9 +48,10 @@ print_header "Downloading b43-tools sources"
 if [[ ! -d $HOME/b43-tools ]]; then mkdir $HOME/b43-tools; fi; 
 wget -O $HOME/b43-tools/b43-tools.tar.xz http://bues.ch/cgit/b43-tools.git/snapshot/b43-tools-b43-fwcutter-014.tar.xz --no-check-certificate
 print_header "Unpacking b43-tools sources"
-tar xvf $HOME/b43-tools/b43-tools.tar.xz
+cd $HOME/b43-tools/
+tar xvf b43-tools.tar.xz
 print_header "Making and installing b43-tools sources"
-cd $HOME/b43-tools/b43-tools/b43-assembler
+cd b43-tools-b43-fwcutter-014/assembler/
 make && sudo make install
 print_finish "Done!"
 print_warn "Please review the output of this script and look if any errors occured during the setup process."
