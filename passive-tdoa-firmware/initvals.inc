@@ -39,6 +39,10 @@
 #define MMIO_TSF_CFP_START		0x18C
 #define MMIO_TSF_CFP_MAXDUR		0x190
 
+/* Define RTT measurements flag */
+#define MMIO_ACK_FLAG           0x194
+#define MMIO_DATA_FLAG          0x198
+
 /* 32-bit DMA */
 #define MMIO_DMA32_BASE0		0x200
 #define MMIO_DMA32_BASE1		0x220
