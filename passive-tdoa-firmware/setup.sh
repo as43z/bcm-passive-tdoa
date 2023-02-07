@@ -57,21 +57,21 @@ print_finish "Done!"
 print_warn "Please review the output of this script and look if any errors occured during the setup process."
 
 # Clean up
-unset COLOR_NC
-unset COLOR_BLACK
-unset COLOR_GRAY
-unset COLOR_RED
-unset COLOR_LIGHT_RED
-unset COLOR_GREEN
-unset COLOR_LIGHT_GREEN
-unset COLOR_BROWN
-unset COLOR_YELLOW
-unset COLOR_BLUE
-unset COLOR_LIGHT_BLUE
-unset COLOR_PURPLE
-unset COLOR_LIGHT_PURPLE
-unset COLOR_CYAN
-unset COLOR_LIGHT_CYAN
-unset COLOR_LIGHT_GRAY
-unset COLOR_WHITE
-unset CURRENT
+unset $COLOR_NC
+unset $COLOR_BLACK
+unset $COLOR_GRAY
+unset $COLOR_RED
+unset $COLOR_LIGHT_RED
+unset $COLOR_GREEN
+unset $COLOR_LIGHT_GREEN
+unset $COLOR_BROWN
+unset $COLOR_YELLOW
+unset $COLOR_BLUE
+unset $COLOR_LIGHT_BLUE
+unset $COLOR_PURPLE
+unset $COLOR_LIGHT_PURPLE
+unset $COLOR_CYAN
+unset $COLOR_LIGHT_CYAN
+unset $COLOR_LIGHT_GRAY
+unset $COLOR_WHITE
+unset $CURRENT

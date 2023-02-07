@@ -6,3 +6,4 @@ wget
 curl
 unzip
 firmware-b43-installer
+flex
